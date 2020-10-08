@@ -43,29 +43,24 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
 end
 
 def all_winter_holiday_supplies(holiday_hash)
-  winter_supplies = []
-  holiday_hash[:winter].map do |holiday, supply|
-    winter_supplies << holiday[supply]
-  end
-  winter_supplies
+  holiday_hash[:winter].map do |holiday, supplies|
+    supplies
+  end.flatten
 end
 
 def all_supplies_in_holidays(holiday_hash)
-  def all_winter_holiday_supplies(holiday_hash)
-    winter_supplies = []
-    holiday_hash.map do |season, holidays|
-      puts "#{season.capitalize}:"
-      holidays.map do |holiday, supplies|
-        puts"  #{holiday.to_s.split('_').map {|w| w.capitalize }.join(' ') }: #{supplies.join(", ")}"
-      end
+  holiday_hash.each do |season, holidays|
+    puts "#{season.capitalize}:"
+    holidays.each do |holiday, supplies|
+      puts"  #{holiday.to_s.split('_').map {|w| w.capitalize }.join(' ') }: #{supplies.join(", ")}"
     end
   end
+end
 
-  def all_holidays_with_bbq(holiday_hash)
-    holiday_hash.map do |season, holidays|
-      holidays.map do |holiday, supplies|
-        holiday if supplies.include?("BBQ")
-      end
-    end.flatten.compact
-  end
+def all_holidays_with_bbq(holiday_hash)
+  holiday_hash.map do |season, holidays|
+    holidays.map do |holiday, supplies|
+      holiday if supplies.include?("BBQ")
+    end
+  end.flatten.compact
 end
