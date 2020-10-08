@@ -22,3 +22,5 @@ def all_winter_holiday_supplies(holiday_hash)
   end
   puts winter_supplies
 end
+
+all_winter_holiday_supplies(holiday_hash)
