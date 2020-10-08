@@ -22,9 +22,9 @@ describe "holiday_supplies_hash" do
  # Write a method that returns the second supply for the Fourth of July
 
  #Michael Henderson: This test is orginally expecting "Watermelon" when  it in fact should be
- # "BBQ". Or, if the test should be asking for the second element, "Watermelon" is not in the 
+ # "BBQ". Or, if the test should be asking for the second element, "Watermelon" is not in the
  # orginal hash and returns "".
- 
+
   describe "#second_supply_for_fourth_of_july" do
     it "returns the string 'BBQ' without hardcoding it" do
       expect(second_supply_for_fourth_of_july(holiday_supplies)).to eq("BBQ")
