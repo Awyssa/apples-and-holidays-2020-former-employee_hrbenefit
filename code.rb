@@ -17,11 +17,20 @@ holiday_hash = {
 
 def all_winter_holiday_supplies(holiday_hash)
   winter_supplies = []
-  holiday_hash[:winter].map do |holiday, supply|
-    winter_supplies << holiday[supply]
+  holiday_hash.map do |season, holidays|
+    puts "#{season.capitalize}:"
+    holidays.each do |holidays, supplies|
+      puts " #{holiday.to_s.split('_').map {|w|} w.capitalize}.join(" ") }: #{supplies.join(",")}"
   end
-  puts winter_supplies
 end
+
+
+
+
+
+
+
+
 
 
 def all_supplies_in_holidays(holiday_hash)
