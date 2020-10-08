@@ -1,7 +1,8 @@
 require 'pry'
 
 def second_supply_for_fourth_of_july(holiday_hash)
-  holiday_hash[:spring][:memorial_day][0]
+  holiday_hash[:spring][:memorial_day] << ["Watermelon"]
+  return holiday_hash[:spring][:memorial_day][1]
 
 
 
