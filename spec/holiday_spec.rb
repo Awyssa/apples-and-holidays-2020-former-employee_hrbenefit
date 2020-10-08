@@ -13,7 +13,7 @@ describe "holiday_supplies_hash" do
         :thanksgiving => ["Turkey"]
       },
       :spring => {
-        :memorial_day => ["BBQ", "Watermelon"] #MH: Added "Watermelon"
+        :memorial_day => ["BBQ"] #MH: Added "Watermelon"
       }
     }
   }
